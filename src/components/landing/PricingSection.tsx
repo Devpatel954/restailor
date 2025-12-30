@@ -16,13 +16,13 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`relative bg-card rounded-2xl p-8 shadow-card border ${
+              className={`relative bg-card rounded-2xl p-8 shadow-card border flex flex-col ${
                 plan.highlighted
-                  ? 'border-accent shadow-glow scale-105'
+                  ? 'border-accent shadow-glow ring-2 ring-accent/20'
                   : 'border-border'
               } hover-lift`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -47,7 +47,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
@@ -59,7 +59,7 @@ const PricingSection = () => {
               <Button
                 asChild
                 variant={plan.highlighted ? 'hero' : 'outline'}
-                className="w-full"
+                className="w-full mt-auto"
                 size="lg"
               >
                 <Link to="/app">{plan.ctaText}</Link>
