@@ -33,15 +33,12 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up stagger-2">
+          <div className="flex justify-center items-center animate-slide-up stagger-2">
             <Button asChild variant="hero" size="xl">
               <Link to="/app" className="gap-2">
                 Try it free
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </Button>
-            <Button variant="hero-outline" size="xl">
-              View Demo
             </Button>
           </div>
 
