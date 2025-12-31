@@ -34,11 +34,11 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-stretch">
           {steps.map((step, index) => (
             <div
               key={step.step}
-              className="relative group"
+              className="relative group h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Connector line */}
@@ -46,7 +46,7 @@ const HowItWorks = () => {
                 <div className="hidden md:block absolute top-12 left-[60%] w-full h-px bg-border" />
               )}
 
-              <div className="relative bg-card rounded-2xl p-8 shadow-card hover-lift border border-border">
+              <div className="relative bg-card rounded-2xl p-8 shadow-card hover-lift border border-border h-full flex flex-col">
                 {/* Step number */}
                 <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
                   {step.step}
