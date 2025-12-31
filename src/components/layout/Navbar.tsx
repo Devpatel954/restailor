@@ -41,8 +41,8 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex md:items-center md:gap-4">
-            <Button variant="ghost" size="sm">
-              Sign in
+            <Button asChild variant="ghost" size="sm">
+              <Link to="/auth">Sign in</Link>
             </Button>
             <Button asChild variant="default" size="sm">
               <Link to="/app">Try it free</Link>
@@ -88,11 +88,11 @@ const Navbar = () => {
                 </>
               )}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="justify-start">
-                  Sign in
+                <Button asChild variant="ghost" size="sm" className="justify-start">
+                  <Link to="/auth" onClick={() => setMobileMenuOpen(false)}>Sign in</Link>
                 </Button>
                 <Button asChild variant="default" size="sm">
-                  <Link to="/app">Try it free</Link>
+                  <Link to="/app" onClick={() => setMobileMenuOpen(false)}>Try it free</Link>
                 </Button>
               </div>
             </div>
